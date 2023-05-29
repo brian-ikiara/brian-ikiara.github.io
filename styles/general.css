@@ -3,6 +3,7 @@ body {
   padding: 0px;
   color: #FFFFFF;
   font-size: 14px;
+  font-color: #000000;
   font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
@@ -10,7 +11,7 @@ header {
   width: 100%;
   background-color: white;
   height: 69px;
-  border-bottom: 1px solid #CCCCC;
+  border-bottom: 1px solid #CCCCCC;
   display: flex;
   align-items: center;
 }
