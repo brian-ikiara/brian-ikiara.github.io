@@ -1,363 +1,218 @@
-# 6uττεrδ09 by iMjN - MVPSpec
+# minima
 
-## <img src="./assets/images/Mario.jpeg" style="width:6.4702in;height:0.11458in" alt="Mario" /> 
+*Minima is a one-size-fits-all Jekyll theme for writers*. It's Jekyll's default (and first) theme. It's what you get when you run `jekyll new`.
 
-<img src="./assets/images/butterScreen.png" style="width:6.46354in;height:4.30903in" alt="Tantrix" />
+[Theme preview](https://jekyll.github.io/minima/)
 
-***An emulator für mich, und für Sie.***
+![minima theme preview](/screenshot.png)
 
-09.06.2023
-
--------------------------------------
+## Installation
 
-Brian M’Ikiara
+Add this line to your Jekyll site's Gemfile:
 
-@alx_africa
+```ruby
+gem "minima"
+```
 
-\#Cohort_10 \#DoThemHardThings \#DaddyAL-X
-
--------------------------------------
+And add this line to your Jekyll site:
 
-## Team
+```yaml
+theme: minima
+```
 
-<table>
-<colgroup>
-<col style="width: 25%" />
-<col style="width: 27%" />
-<col style="width: 17%" />
-<col style="width: 29%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><strong>Member</strong></th>
-<th><strong>Socials</strong></th>
-<th><strong>Role</strong></th>
-<th><strong>Reason</strong></th>
-</tr>
-<tr class="odd">
-<th><ol type="1">
-<li><blockquote>
-<p>Brian M’Ikiara 😡</p>
-</blockquote></li>
-</ol></th>
-<th>(<a href="https://github.com/brian-ikiara/"><u>GitHub</u></a>, <a
-href="https://twitter.com/brian_ikiara"><u>Twitter</u></a>)</th>
-<th>CTO and Founder of iMjN</th>
-<th><em><strong>They’re the owner of the idea.</strong></em></th>
-</tr>
-<tr class="header">
-<th><ol start="2" type="1">
-<li><blockquote>
-<p>Mr. Nobody 👻</p>
-</blockquote></li>
-</ol></th>
-<th>(<a
-href="https://www.youtube.com/watch?v=ryaksaimqU4"><u>GitHub</u></a>, <a
-href="https://www.youtube.com/watch?v=ryaksaimqU4"><u>Twitter</u></a>)</th>
-<th>Mascot</th>
-<th><em><strong>Er ist wirklich cool und intressant.</strong></em></th>
-</tr>
-</thead>
-<tbody>
-</tbody>
-</table>
+And then execute:
 
-## Architecture
+    $ bundle
 
-***This Project will be in 2 parts***:
 
-### The HARDware 😜: The εµ Platform
+## Contents At-A-Glance
 
-> \**TBD by the end of Specialization*\*
+Minima has been scaffolded by the `jekyll new-theme` command and therefore has all the necessary files and directories to have a new Jekyll site up and running with zero-configuration.
 
-This will be emulating a Game console’s hardware and the following
-components make up a simple NES console:
+### Layouts
 
-#### CPU(*central processing unit*) 🤖
+Refers to files within the `_layouts` directory, that define the markup for your theme.
 
-You should know that this is what makes a rock a Computer. 🤣
+  - `default.html` &mdash; The base layout that lays the foundation for subsequent layouts. The derived layouts inject their contents into this file at the line that says ` {{ content }} ` and are linked to this file via [FrontMatter](https://jekyllrb.com/docs/frontmatter/) declaration `layout: default`.
+  - `home.html` &mdash; The layout for your landing-page / home-page / index-page. [[More Info.](#home-layout)]
+  - `page.html` &mdash; The layout for your documents that contain FrontMatter, but are not posts.
+  - `post.html` &mdash; The layout for your posts.
 
-#### Memory 🧠
+### Includes
 
-This is the **RAM**(*random access memory*) and you also know what that
-is. We’ll be dealing with lots of
-[**<u>Assembly</u>**](https://www.tutorialspoint.com/assembly_programming/assembly_introduction.htm)
-and allocation of memory, which you should know ranges from the
-addresses **0x00000000** to **0x0000ffff**(*for a standard computer, and
-not a 🗿*). For the NES, it should span across **2KB** i.e. the
-addresses **0x0000** to **0x07ff**.[^1]
+Refers to snippets of code within the `_includes` directory that can be inserted in multiple layouts (and another include-file as well) within the same theme-gem.
 
-#### APU(*audio processing unit*) 🔊
+  - `disqus_comments.html` &mdash; Code to markup disqus comment box.
+  - `footer.html` &mdash; Defines the site's footer section.
+  - `google-analytics.html` &mdash; Inserts Google Analytics module (active only in production environment).
+  - `head.html` &mdash; Code-block that defines the `<head></head>` in *default* layout.
+  - `header.html` &mdash; Defines the site's main header section. By default, pages with a defined `title` attribute will have links displayed here.
 
-This will handle all our **Sound**. This should span across the
-addresses **0x4000** to **0x40**
+### Sass
 
-**17**.
+Refers to `.scss` files within the `_sass` directory that define the theme's styles.
 
-#### PPU(*picture processing unit*) 🖼️
+  - `minima.scss` &mdash; The core file imported by preprocessed `main.scss`, it defines the variable defaults for the theme and also further imports sass partials to supplement itself.
+  - `minima/_base.scss` &mdash; Resets and defines base styles for various HTML elements.
+  - `minima/_layout.scss` &mdash; Defines the visual style for various layouts.
+  - `minima/_syntax-highlighting.scss` &mdash; Defines the styles for syntax-highlighting.
 
-This is what handles all the **graphics** in our game, from **texture**
-to **surface** rendering, **sprites** and all that 🍦😜.
+### Assets
 
-***Time for a history lesson***:
+Refers to various asset files within the `assets` directory.
+Contains the `main.scss` that imports sass files from within the `_sass` directory. This `main.scss` is what gets processed into the theme's main stylesheet `main.css` called by `_layouts/default.html` via `_includes/head.html`.
 
-> *The NES’s original* [**<u>Ricoh 2A03(NTSC)</u>**](https://en.wikipedia.org/wiki/Ricoh_2A03)
-> *CPU didn’t have GPU support, (*it shouldn’t be confused with the
-> **[<u>Ricoh 2A07(PAL)</u>](https://en.wikipedia.org/wiki/Ricoh_2A03)**
-> version, by the way*), so they had to build a separate system
-> entirely. With the new integrations in the **PAL** version, it means
-> it will be harder to emulate the nitty-gritties(*especially the **bit
-> fields** and the lot*). 😱*
+This directory can include sub-directories to manage assets of similar type, and will be copied over as is, to the final transformed site directory.
 
-#### Cartridge 🧭
+### Plugins
 
-This is what houses our **game ROM**(*read-only memory*). All the
-libraries and files needed to run our game will be stored in this
-component. *It what you used to blow into, as a kid* e.g.
-[<u>Sonic</u>](https://www.youtube.com/watch?v=25R7krgt8nM) and
-[<u>Super Mario</u>](https://www.youtube.com/watch?v=1qcTwuKozs8).😅
+Minima comes with [`jekyll-seo-tag`](https://github.com/jekyll/jekyll-seo-tag) plugin preinstalled to make sure your website gets the most useful meta tags. See [usage](https://github.com/jekyll/jekyll-seo-tag#usage) to know how to set it up.
 
-#### CIC(*checking integrated circuit*)
+## Usage
 
-This is the **lockout chip** that was a security feature that checked
-the authenticity of a **game ROM** using the “**lock and key**”
-principle.[^2] Obviously, we’ll not be emulating this component because:
+### Home Layout
 
-1.  The **game ROM** we’re building isn’t authentic, inherently, and… 😞
+`home.html` is a flexible HTML layout for the site's landing-page / home-page / index-page. <br/>
 
-2.  It makes the emulator slow. 😆[^3]
+#### Main Heading and Content-injection
 
-With all that info I believe your brain is melting. Trust me, it’s
-simple stuff. 😂
+From Minima v2.2 onwards, the *home* layout will inject all content from your `index.md` / `index.html` **before** the **`Posts`** heading. This will allow you to include non-posts related content to be published on the landing page under a dedicated heading. *We recommended that you title this section with a Heading2 (`##`)*.
 
-***[<u>Here’s an important message from the Man who can, literally, do
-anything</u>](https://www.tiktok.com/@johnnysins/video/7150077316356410670).
-Click the link, please!!!***
+Usually the `site.title` itself would suffice as the implicit 'main-title' for a landing-page. But, if your landing-page would like a heading to be explicitly displayed, then simply define a `title` variable in the document's front matter and it will be rendered with an `<h1>` tag.
 
-<img src="./assets/images/YesPapa.jpg" style="width:2.54167in;height:2.15625in" />
+#### Post Listing
 
-### The SoFtWaRe ❄️: The 6uττεrδ09 Game
+This section is optional from Minima v2.2 onwards.<br/>
+It will be automatically included only when your site contains one or more valid posts or drafts (if the site is configured to `show_drafts`).
 
-> \**TBD by now*\*
+The title for this section is `Posts` by default and rendered with an `<h2>` tag. You can customize this heading by defining a `list_title` variable in the document's front matter.
 
-So the software defines the game itself. It will be a sh\*\*\*\*y,
-**honestly…really bad - like Alpha Prime bad**, knock-off of the
-original **Wolfenstein** by [<u>Muse
-Software</u>](https://en.wikipedia.org/wiki/Wolfenstein#:~:text=1981%E2%80%931992%3A%20Muse%20Software,-The%20series%20presents&text=Castle%20Wolfenstein%20was%20developed%20by,especially%20in%20the%20stealth%20genre.).
-The following defines the overall Architecture:
+--
 
-#### Game Loop(GL)
+### Customization
 
-This is the **MAIN** and most **IMPORTANT** component of our game as
-it’s where all the **input** will be handled, the **game state** will be
-updated and the **graphics** will be rendered.[^4]
+To override the default structure and style of minima, simply create the concerned directory at the root of your site, copy the file you wish to customize to that directory, and then edit the file.
+e.g., to override the [`_includes/head.html `](_includes/head.html) file to specify a custom style path, create an `_includes` directory, copy `_includes/head.html` from minima gem folder to `<yoursite>/_includes` and start editing that file.
 
-#### Rendering
+The site's default CSS has now moved to a new place within the gem itself, [`assets/main.scss`](assets/main.scss). To **override the default CSS**, the file has to exist at your site source. Do either of the following:
+- Create a new instance of `main.scss` at site source.
+  - Create a new file `main.scss` at `<your-site>/assets/`
+  - Add the frontmatter dashes, and
+  - Add `@import "minima";`, to `<your-site>/assets/main.scss`
+  - Add your custom CSS.
+- Download the file from this repo
+  - Create  a new file `main.scss` at `<your-site>/assets/`
+  - Copy the contents at [assets/main.scss](assets/main.scss) onto the `main.scss` you just created, and edit away!
+- Copy directly from Minima 2.0 gem
+  - Go to your local minima gem installation directory ( run `bundle show minima` to get the path to it ).
+  - Copy the `assets/` folder from there into the root of `<your-site>`
+  - Change whatever values you want, inside `<your-site>/assets/main.scss`
 
-This is where we’ll be handling the graphics using SDL-2. Our
-**rendering context** will be defined here, our **textures**, **walls**,
-**enemies** and any add-ons to the game will be handled here.
+--
 
-#### Map Generation
+### Customize navigation links
 
-This is where the levels will be defined.[^5] This is where all the
-**layout** of surfaces and objects in the game shall be defined.
+This allows you to set which pages you want to appear in the navigation area and configure order of the links.
 
-#### Player Controls
+For instance, to only link to the `about` and the `portfolio` page, add the following to you `_config.yml`:
 
-Once we have the environment, it’s time to explore it![^6] We’ll define
-**[<u>Player1</u>](https://www.rottentomatoes.com/m/ready_player_one)**
-and their **mechanics + interaction** in this section**.**
+```yaml
+header_pages:
+  - about.md
+  - portfolio.md
+```
 
-#### Collision Detection
+--
 
-This is where we’ll be implementing a technique known as
-**[<u>Raycasting</u>](https://en.wikipedia.org/wiki/Ray_Charles)** that
-will help define the overall **Game environment**.[^7]
+### Change default date format
 
-#### AI and Enemy Behavior
+You can change the default date format by specifying `site.minima.date_format`
+in `_config.yml`.
 
-We’ll implement **AI**(*artificial intelligence*) for enemy characters
-and then, define their **behavior**/**mechanics**, such as
-**path finding**, **line-of-sight detection**, and **attacking
-strategies**.[^8]
+```
+# Minima date format
+# refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
+minima:
+  date_format: "%b %-d, %Y"
+```
 
-#### Weapons and Projectiles
+--
 
-We’ll create a variety of weapons that the player can acquire, each with
-different **attributes** such as *damage*, *rate of fire*, and *range*
-and then, implement **projectile mechanics** for bullets or other
-projectiles fired by the player or enemies.[^9]
-
-#### Audio
-
-We’ll utilize the SDL-2 library to handle **audio playback**. Include
-**SFX**(*sound effects*) for player actions, enemy sounds,
-**BGM**(*background music*), and other in-game audio.
-
-#### User Interface
-
-We’ll be designing and implementing the **user interface elements**,
-including **menus**, **HUD** (*heads-up display*), **scoreboards**, and
-other relevant information displayed on the screen.
-
-#### Game Logic and State Management
-
-In this section, we’ll develop the game logic to handle events,
-transitions between **game states** (e.g.: *menu*, *gameplay*, *pause*,
-*scoring*, *level progression* and *game over conditions*) and implement
-**save/load functionality** if desired.
-
-#### Optimization and Performance
-
-We’ll be taking into account the various **performance optimizations**,
-such as **ERTs**(*efficient rendering techniques*), **spatial
-partitioning** for collision detection, and minimizing
-**over/under-calculation**.
-
-#### Testing and Debugging
-
-**TDD**(*test-driven development*) is a key philosophy in
-**SDLC**(*Software Development Life Cycle*). The key is to regularly
-test and debug our game to ensure it functions as intended. For this
-we’ll be implementing **logging** + **debugging tools** to aid in
-identifying and fixing issues.[^10]
-
-## APIs and Methods
-
-<img src="./assets/images/Shocked.jpg" style="width:3.125in;height:1.75in" />
-
-## Existing Solutions
-
-### Mupen64 Emulator
-
-> IMO, the best emulator on the market right now.
-
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><strong>Similarities</strong></th>
-<th><strong>Differences</strong></th>
-</tr>
-<tr class="odd">
-<th><ul>
-<li><blockquote>
-<p>Emulates hardware.</p>
-</blockquote></li>
-<li><blockquote>
-<p>Can run a game ROM.</p>
-</blockquote></li>
-<li><blockquote>
-<p>Pretty sleek.</p>
-</blockquote></li>
-</ul></th>
-<th><ul>
-<li><blockquote>
-<p>Well…um…it’s just…<strong>BETTER</strong>! 😂</p>
-</blockquote></li>
-</ul></th>
-</tr>
-</thead>
-<tbody>
-</tbody>
-</table>
-
-### SNES9x EX+
-
-> This is another favorite of mine. It runs the Super Nintendo Super
-> ROMS, smoothly. Pretty neat, no?
-
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><strong>Similarities</strong></th>
-<th><strong>Differences</strong></th>
-</tr>
-<tr class="odd">
-<th><ul>
-<li><blockquote>
-<p>Built in C.</p>
-</blockquote></li>
-<li><blockquote>
-<p>Simple and robust.</p>
-</blockquote></li>
-<li><blockquote>
-<p>Can run a game ROM.</p>
-</blockquote></li>
-</ul></th>
-<th><ul>
-<li><blockquote>
-<p>Deployed in Android</p>
-</blockquote></li>
-<li><blockquote>
-<p>And…um…it’s just…<strong>YK 😅</strong></p>
-</blockquote></li>
-</ul></th>
-</tr>
-</thead>
-<tbody>
-</tbody>
-</table>
-
-# Parting Shot[^11]
-
-Emulation can be difficult but as Mario would put it:
-
-<img src="./assets/images/Mario.jpeg" style="width:2.15625in;height:2.54167in" />
-
-**LET’S A GO!!!!!**
-
-[^1]:
-    > Welcome to the beautiful world of **ASM**(*assembly*). 🎉 The
-    > addresses **0x00000000** & **0x0000ffff**, or simply **0x0000** &
-    > **0xffff**, denote the lowest and highest possible memory address in
-    > a **16-bit byte-addressable** system i.e. 65536 bytes of memory. 🤯
-    > **RTFM, will you?**
-
-[^2]: 
-    > The ‘**key**’ was stored in the Cartridge that opened the
-    > ‘**lock**’ that was stored in the Console.
-
-[^3]: Plus, I’m pretty lazy…**this documentation shouldn’t fool you**!
-
-[^4]:
-    > It is important to maintain a constant **frame rate** and the GL
-    > should run **continuously**. 🤓
-
-[^5]:
-    > There will be 3 in this implementation, but more are coming soon.
-    > 😆
-
-[^6]:
-    > You’ll have your 🥮 and eat it, in this rare scenario. Can I get
-    > Three Cheers over here? 😂
-
-[^7]:
-    > This includes, and is not limited to, the **player-enemy-object
-    > interactions**. Make sure your game doesn’t get utterly annihilated
-    > like **Alpha Prime** by [<u>Black Element
-    > Software</u>](https://en.wikipedia.org/wiki/Alpha_Prime). 🤣
-
-[^8]:
-    > Enemies should be able to navigate the game world and engage the
-    > player in combat. Sounds [**<u>HARD</u>**](https://g.co/kgs/unQ394),
-    > no? 😜
-
-[^9]: Finally, my knowledge in Analytical Chemistry will be relevant! 😀
-
-[^10]:
-    > This is a component that pervades 🤓, the architecture of the
-    > Project and this is why we’ve listed it las the last.
-
-[^11]:
-    > At the time of writing this ich habe keine Idee of what I’d be
-    > doing for my Project. I hope you’ll find this as fascinating as I
-    > did. 😃
+### Enabling comments (via Disqus)
+
+Optionally, if you have a Disqus account, you can tell Jekyll to use it to show a comments section below each post.
+
+To enable it, add the following lines to your Jekyll site:
+
+```yaml
+  disqus:
+    shortname: my_disqus_shortname
+```
+
+You can find out more about Disqus' shortnames [here](https://help.disqus.com/customer/portal/articles/466208).
+
+Comments are enabled by default and will only appear in production, i.e., `JEKYLL_ENV=production`
+
+If you don't want to display comments for a particular post you can disable them by adding `comments: false` to that post's YAML Front Matter.
+
+--
+
+### Social networks
+
+You can add links to the accounts you have on other sites, with respective icon, by adding one or more of the following options in your config:
+
+```yaml
+twitter_username: jekyllrb
+github_username:  jekyll
+dribbble_username: jekyll
+facebook_username: jekyll
+flickr_username: jekyll
+instagram_username: jekyll
+linkedin_username: jekyll
+pinterest_username: jekyll
+youtube_username: jekyll
+googleplus_username: +jekyll
+rss: rss
+
+mastodon:
+ - username: jekyll
+   instance: example.com
+ - username: jekyll2
+   instance: example.com
+```
+
+--
+
+### Enabling Google Analytics
+
+To enable Google Analytics, add the following lines to your Jekyll site:
+
+```yaml
+  google_analytics: UA-NNNNNNNN-N
+```
+
+Google Analytics will only appear in production, i.e., `JEKYLL_ENV=production`
+
+--
+
+### Enabling Excerpts on the Home Page
+
+To display post-excerpts on the Home Page, simply add the following to your `_config.yml`:
+
+```yaml
+show_excerpts: true
+```
+
+## Contributing
+
+Bug reports and pull requests are welcome on GitHub at https://github.com/jekyll/minima. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+
+## Development
+
+To set up your environment to develop this theme, run `script/bootstrap`.
+
+To test your theme, run `script/server` (or `bundle exec jekyll serve`) and open your browser at `http://localhost:4000`. This starts a Jekyll server using your theme and the contents. As you make modifications, your site will regenerate and you should see the changes in the browser after a refresh.
+
+## License
+
+The theme is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).

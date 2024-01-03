@@ -1,3 +1,0 @@
-# For the necessary images...
-
-Should give you a better picture of who you're dealing with.
