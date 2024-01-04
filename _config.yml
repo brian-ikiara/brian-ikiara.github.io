@@ -18,6 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
+author: Brian M'Ikiara
 title: Ikiara's Portfolio
 email: brnikiara@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
@@ -25,9 +26,12 @@ description: >- # this means to ignore newlines until "baseurl:"
   I hope you'll gain insight on how to build your own in future. Happy Hacking. =-D
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://brian-ikiara.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: brian_ikiara
 github_username:  brian-ikiara
-linkedin_username: br14n_1k14r4
+linkedin_username: br14n-1k14r4
+twitter_username: brian_ikiara
+header_pages:
+  - about.markdown
+  - projects.markdown
 
 # Build settings
 theme: minima
