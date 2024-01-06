@@ -9,6 +9,15 @@
   // Positioning context for the mobile navigation icon
   position: relative;
 }
+ 
+// Logo styles
+.logo {
+  float: left;
+  margin-right: 10px; // Adjust as needed
+  img {
+    max-height: 40px; // Set the maximum height for the logo
+  }
+}
 
 .site-title {
   @include relative-font-size(1.625);
