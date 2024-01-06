@@ -4,3 +4,13 @@
 
 layout: home
 ---
+
+## '🎉 Willkommen zur meine Profil!'
+
+So glad you could visit me!
+
+## 😃 Wanna learn more about me?
+
+You can do so by clicking 'About'. Feel free to checkout my work by clicking 'Projects'.
+
+## 😎 Don't have too much fun now!
