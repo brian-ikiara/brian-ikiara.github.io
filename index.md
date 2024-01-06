@@ -3,7 +3,7 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: home
-title: '🎉 Willkommen zur meine Profil!'
+title: 'Willkommen zur meine Profil!'
 ---
 
 ## 😎 So glad you could visit me!
