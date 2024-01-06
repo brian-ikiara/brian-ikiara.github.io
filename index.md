@@ -3,14 +3,9 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: home
+title: '🎉 Willkommen zur meine Profil!'
 ---
 
-## '🎉 Willkommen zur meine Profil!'
+## 😎 So glad you could visit me!
 
-So glad you could visit me!
-
-## 😃 Wanna learn more about me?
-
-You can do so by clicking 'About'. Feel free to checkout my work by clicking 'Projects'.
-
-## 😎 Don't have too much fun now!
+Wanna learn more about me? You can do so by clicking 'About'. Feel free to checkout my work by clicking 'Projects'. Don't have too much fun now!
