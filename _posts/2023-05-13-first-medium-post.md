@@ -12,7 +12,7 @@ categories: jekyll update
 This was my first ever post on [Medium](https://medium.com/@brian_ikiara/just-what-happens-when-you-type-google-com-in-your-browser-and-press-enter-4df535c56545). I try to explain the whole process that's involved when we type in an URL in a browser, in a fun and simple manner. Yeah.
 
 <div align='center'>
-    <img src='/assets/images/2023-05-13-first-medium-post.jpg' style='width:100px;height:100px' alt='{{ post.title })' />
+    <img src='/assets/images/2023-05-13-first-medium-post.jpg' style='width:100px;height:100px' alt='{{ post.title }}' />
 </div>
 
 ## 😁 Where can I view this article?
