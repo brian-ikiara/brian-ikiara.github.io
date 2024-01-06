@@ -195,6 +195,13 @@
   > li {
     margin-bottom: $spacing-unit;
   }
+
+  .thumbnail {
+    width: 100px;
+    height: auto;
+    margin-right: 10px;
+    float: left;
+  }
 }
 
 .post-meta {
@@ -228,6 +235,7 @@
 
 .post-content {
   margin-bottom: $spacing-unit;
+  overflow: hidden;
 
   h2 {
     @include relative-font-size(2);

@@ -30,8 +30,8 @@ github_username:  brian-ikiara
 linkedin_username: br14n-1k14r4
 twitter_username: brian_ikiara
 header_pages:
-  - about.markdown
-  - projects.markdown
+  - about.md
+  - projects.md
 
 # Build settings
 theme: minima
