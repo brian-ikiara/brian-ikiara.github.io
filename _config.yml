@@ -33,6 +33,10 @@ twitter_username: brian_ikiara
 header_pages:
   - about.md
   - projects.md
+category_dir: categories
+collections:
+  projects:
+    output: true
 disqus:
   shortname: 'https-brian-ikiara-github-io'
 
