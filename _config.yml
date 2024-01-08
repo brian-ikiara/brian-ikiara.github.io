@@ -33,6 +33,10 @@ twitter_username: brian_ikiara
 header_pages:
   - about.md
   - projects.md
+collections:
+  - projects
+disqus:
+  shortname: 'https-brian-ikiara-github-io'
 
 # Build settings
 theme: minima
