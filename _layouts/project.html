@@ -20,7 +20,7 @@ layout: default
           <img src="{{ project.thumbnail | relative_url }}" alt="{{ project.title }}" class="thumbnail">
         {%- endif -%}
         <h3>
-          <a class="u-url" href="{{ page.url | relative_url }}" hidden>
+          <a class="post-link" href="{{ project.url | relative_url }}">
             {{ project.title | escape }}
           </a>
         </h3>

@@ -35,7 +35,7 @@ header_pages:
   - projects.md
 collections:
   projects:
-    permalink: /:collection/:name
+    permalink: /:collection/:title
 disqus:
   shortname: 'https-brian-ikiara-github-io'
 
