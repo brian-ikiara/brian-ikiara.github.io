@@ -1,6 +1,7 @@
 ---
 layout: project
 title: Projects
+categories: jekyll update
 permalink: /projects/
 ---
 
