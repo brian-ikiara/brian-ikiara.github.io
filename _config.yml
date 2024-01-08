@@ -32,9 +32,10 @@ linkedin_username: br14n-1k14r4
 twitter_username: brian_ikiara
 header_pages:
   - about.md
-  - /projects/index.md
+  - projects.md
 collections:
-  - projects
+  projects:
+    permalink: /:collection/:name
 disqus:
   shortname: 'https-brian-ikiara-github-io'
 

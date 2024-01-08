@@ -1,8 +1,8 @@
 ---
 layout: post
-title: '7om0mi: The Task Manager'
+title: '7om0mi'
 description: 'A companion who manages all your daily tasks for you'
-categories: jekyll update
+date:   2023-10-06 03:09:05 +0300
 comments: true
 ---
 

@@ -1,9 +1,9 @@
 ---
 layout: post
-title: '6utt3rd09: The Ray-casting Engine'
+title: '6utt3rd09'
 description: 'A 3D Ray-casting engine made in Python and PyGame'
+date:   2023-06-13 03:09:05 +0300
 thumbnail: /assets/images/2023-06-12-6utt3rd09-running.jpeg
-categories: jekyll update
 comments: true
 ---
 

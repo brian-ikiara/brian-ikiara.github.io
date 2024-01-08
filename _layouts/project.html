@@ -15,7 +15,7 @@ layout: default
       {%- for project in site.projects -%}
       <li>
         {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
+        <span class="post-meta">{{ project.date | date: date_format }}</span>
         {%- if project.thumbnail -%}
           <img src="{{ project.thumbnail | relative_url }}" alt="{{ project.title }}" class="thumbnail">
         {%- endif -%}
