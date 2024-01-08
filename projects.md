@@ -1,6 +1,6 @@
 ---
 layout: project
-title: '💥 Some awesome Projects'
+title: Projects
 permalink: /projects/
 ---
 
