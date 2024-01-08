@@ -5,6 +5,7 @@ date:   2023-05-13 03:09:05 +0300
 author: "Brian M'Ikiara"
 thumbnail: /assets/images/2023-05-13-first-medium-post.jpg
 categories: jekyll update
+comments: true
 ---
 
 ## 😊 Hello there...

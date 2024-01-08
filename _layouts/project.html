@@ -16,17 +16,17 @@ layout: default
       <li>
         {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
         <span class="post-meta">{{ post.date | date: date_format }}</span>
-        <img src="{{ project.thumbnail | relative_url }}" alt="{{ project.title }}" class="thumbnail">
+        {%- if project.thumbnail -%}
+          <img src="{{ project.thumbnail | relative_url }}" alt="{{ project.title }}" class="thumbnail">
+        {%- endif -%}
         <h3>
           <a class="post-link" href="{{ project.url | relative_url }}">
             {{ project.title | escape }}
           </a>
         </h3>
-        <p class'rss-subscribe'>
-          {%- if project.description -%}
-            {{ project.description }}
-          {%- endif -%}
-        </p>
+        {%- if project.description -%}
+          <h4>{{ project.description }}</h4>
+        {%- endif -%}
         {%- if site.show_excerpts -%}
           {{ project.excerpt }}
         {%- endif -%}

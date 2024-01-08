@@ -5,6 +5,7 @@ date:   2023-12-19 03:09:05 +0300
 author: "Brian M'Ikiara"
 thumbnail: /assets/images/2023-12-19-first-linkedin-post.jpg
 categories: jekyll update
+comments: true
 ---
 
 ## 😊 Hello there...
