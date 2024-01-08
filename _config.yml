@@ -33,9 +33,6 @@ twitter_username: brian_ikiara
 header_pages:
   - about.md
   - projects.md
-collections:
-  projects:
-    permalink: /:collection/:title
 disqus:
   shortname: 'https-brian-ikiara-github-io'
 

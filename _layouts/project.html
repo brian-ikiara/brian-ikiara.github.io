@@ -9,10 +9,10 @@ layout: default
 
   {{ content }}
 
-  {%- if site.projects.size > 0 -%}
+  {%- if site.categories.projects.size > 0 -%}
     <h2 class="post-list-heading">{{ page.list_title | default: "Some awesome Projects" }}</h2>
     <ul class="post-list">
-      {%- for project in site.projects -%}
+      {%- for project in site.categories.projects -%}
       <li>
         {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
         <span class="post-meta">{{ project.date | date: date_format }}</span>
