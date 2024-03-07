@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Just what happens when you type in google.com and press enter?"
+title:  "An article dissecting 'example.com'"
 date:   2023-05-13 03:09:05 +0300
 author: "Brian M'Ikiara"
 thumbnail: /assets/images/2023-05-13-first-medium-post.jpg
@@ -8,14 +8,6 @@ categories: jekyll update
 comments: true
 ---
 
-## 😊 Hello there...
-
-This was my first ever post on [Medium](https://medium.com/@brian_ikiara/just-what-happens-when-you-type-google-com-in-your-browser-and-press-enter-4df535c56545). I try to explain the whole process that's involved when we type in an URL in a browser, in a fun and simple manner. Yeah.
-
 <div align='center'>
     <img src="{{ "/assets/images/2023-05-13-first-medium-post.jpg" | relative_url }}" style='width:400px;height:300px' alt='Mediumy' />
 </div>
-
-## 😁 Where can I view this article?
-
-Click on 'Medium' to view it. You can create an account then follow me, ***that's if you want to***.
