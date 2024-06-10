@@ -1,5 +1,21 @@
-## License
+<div align="center">
+    <h1>m-ikiara.github.io</h1>
+</div>
 
-This repo is protected under the MIT License. See [LICENSE](./LICENSE.txt) for more details.[^1]
+## Getting Started[^1]
 
-[^1]: Want to understand the Commit Messages? Refer to the following [Issue](https://github.com/brian-ikiara/brian-ikiara.github.io/issues/1). Feel free to create your own. We appreciate the feedback.😃
+Just click on the link and enjoy the show.
+
+## References
+
+- MDN Web Documentation: [Docs](https://developer.mozilla.org/en-US/)
+
+## Licensing
+
+This project is licensed under the:
+
+- [MIT License](./LICENSE).
+
+at your option.
+
+[^1]: Having trouble understanding these commits? Check out this [Issue](https://github.com/m-ikiara/m-ikiara.github.io/issues/1) for more details.
