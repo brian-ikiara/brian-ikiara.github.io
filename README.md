@@ -1,5 +1,5 @@
 <div align="center">
-    <h1>m-ikiara.github.io</h1>
+    <h1>Awwnnnnh!</h1>
 </div>
 
 ## Getting Started[^1]
@@ -18,4 +18,4 @@ This project is licensed under the:
 
 at your option.
 
-[^1]: Having trouble understanding these commits? Check out this [Issue](https://github.com/m-ikiara/m-ikiara.github.io/issues/1) for more details.
+[^1]: Having trouble understanding these commits? Check out this [Issue](https://github.com/suna-proctor/suna-proctor.github.io/issues/1) for more details.

@@ -1,1 +1,1 @@
-console.log("Hello there. This site is under construction. Thanks for stopping by.");
+console.log("[INFO] Flipping hell! Preparing ze probe and Butter and the Cheese. Stop by soon for your examination.");
